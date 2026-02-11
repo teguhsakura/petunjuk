@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Petunjuk Pemakaian Alat - Teguh Sakura</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Petunjuk penggunaan Alat Monitoring MPPT atau Inverter Hybrid">
+    <meta name="author" content="Teguh Sakura">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23F9D71C' d='M18 18H6V6h12v12zm0-14H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM9 16c-.55 0-1-.45-1-1v-2c0-.55.45-1 1-1s1 .45 1 1v2c0 .55-.45 1-1 1zm0-4c-.55 0-1-.45-1-1V9c0-.55.45-1 1-1s1 .45 1 1v2c0 .55-.45 1-1 1zm6 4c-.55 0-1-.45-1-1v-2c0-.55.45-1 1-1s1 .45 1 1v2c0 .55-.45 1-1 1zm0-4c-.55 0-1-.45-1-1V9c0-.55.45-1 1-1s1 .45 1 1v2c0 .55-.45 1-1 1z'/%3E%3C/svg%3E">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 15px;
+            color: #2c3e50;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(to right, #2c3e50, #4a6491);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 5px solid #3498db;
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        /* Content Area */
+        .content {
+            padding: 25px;
+        }
+
+        .step-card {
+            background: #f8f9fa;
+            border-left: 5px solid #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .step-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .step-number {
+            background: #3498db;
+            color: white;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .step-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-title i {
+            color: #3498db;
+        }
+
+        /* Video Section */
+        .video-container {
+            margin-top: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+        }
+
+        /* Links & Buttons */
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        .btn-download:hover {
+            background: #219150;
+        }
+
+        .btn-download.alt {
+            background: #2980b9;
+        }
+        .btn-video {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-video:hover { background: #5a6268; }
+        .video-wrapper {
+            display: none; /* Sembunyikan secara default */
+            margin-top: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #000;
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background: #f1f3f5;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        
+        .footer-links a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.4rem; }
+            .content { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1><i class="fas fa-book"></i> Panduan Penggunaan Alat</h1>
+    </div>
+
+    <div class="content">
+        
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-title"><i class="fas fa-plug"></i> Pemasangan Alat Monitoring</div>
+            <p>Tancapkan alat monitoring ke port yang sesuai:</p>
+            <ul style="margin-left: 20px; margin-top: 10px; font-size: 0.95rem;">
+                <li>Untuk <b>Alat Monitoring MPPT</b> di tancapkan ke <b>SCC MPPT</b> merk Techfine, Samoto, atau Amsan Hijau (60A).</li>
+                <li>Untuk <b>Alat Monitoring Inverter Hybrid</b> di tancapkan ke <b>Inverter Hybrid</b> merk Techfine, Amsan, atau Samoto.</li>
+            </ul>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-title"><i class="fas fa-wifi"></i> Koneksi WiFi Awal</div>
+            <p>Buka pengaturan <b>WiFi</b> di HP Anda, cari <b>SSID WiFi</b> bernama <font color='blue'><b>Teguh Sakura</b></font> dan lalu hubungkan ke situ (tanpa password).</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-title"><i class="fas fa-cog"></i> Konfigurasi WiFi</div>
+            <p>Halaman web dashboard untuk pengaturan akan terbuka otomatis (<font color='green'>Sign-in WiFi</font>). Jika tidak, buka web browser dan akses IP alat di <font color='green'>http://192.168.4.1/</font> </p>
+            <ul style="margin-left: 20px; margin-top: 10px; font-size: 0.95rem;">
+                <li>Klik menu <font color='blue'><b>WiFi</b></font>.</li>
+                <li>Tunggu proses pindai, pilih nama WiFi yang ada di tempat Anda.</li>
+                <li>Masukkan  Password WiFi  nya dan klik <font color='blue'><b>Simpan</b></font>.</li>
+            </ul>
+            <button class="btn-video" onclick="toggleVideo('vid3')">
+                    <i class="fas fa-video"></i> Lihat Video Tutorial Konek WiFi
+                </button>
+
+                <div id="vid3" class="video-wrapper">
+                    <video controls>
+                        <source src="https://github.com/teguhsakura/petunjuk/blob/main/Tutorial%20konek%20WiFi%20dan%20Seting%20WiFi.mp4?raw=true" type="video/mp4">
+                    </video>
+                </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-title"><i class="fab fa-android"></i> Download & Instalasi Blynk Legacy</div>
+            <p>Aplikasi ini memerlukan <font color='green'><b>Blynk Legacy</b></font> (Blynk Versi lama). Silahkan download melalui link di bawah:</p>
+            
+            <a href="https://github.com/teguhsakura/petunjuk/releases/download/android_apps/blynk_legacy_2.27.34_arm64-v8a.apk" target="_blank" class="btn-download">
+                <i class="fas fa-download"></i> Download Versi Arm64-v8A
+            </a>
+            <a href="https://github.com/teguhsakura/petunjuk/releases/download/android_apps/blynk_legacy_2.27.34_armeabi-v7a.apk" target="_blank" class="btn-download alt">
+                <i class="fas fa-download"></i> Versi Armeabi-v7A
+            </a>
+            <p style="margin-top: 25px; font-size: 1.0rem; color: red;">
+                <i class="fas fa-info-circle"></i> Jika versi <b>Arm64-v8A</b> tidak bisa di install atau jalankan, maka download versi <b>Armeabi-v7A</b>.
+            </p>
+            <br><br>
+            <p>Lalu jalanan Aplikasi Blynk nya, sebelumnya perlu di seting pakai Custom Server</p>
+
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">5</div>
+            <div class="step-title">Tutorial Setting Custom Server</div>
+            <img src="https://raw.githubusercontent.com/teguhsakura/petunjuk/main/Crop%20setingan%20custom%20server.jpeg" 
+         alt="Info Akun Blynk" 
+         style="width: 100%; max-width: 400px; border-radius: 10px; border: 2px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            <p>Ikuti langkah setting custom server, agar pakai Host Address <b>103.102.250.127</b> dan Port <b>9443</b> pada video di bawah ini:</p>
+        <button class="btn-video" onclick="toggleVideo('vid5')">
+           <i class="fas fa-video"></i> Lihat Video
+        </button>
+
+        <div id="vid5" class="video-wrapper">
+           <video controls>
+                <source src="https://github.com/teguhsakura/petunjuk/raw/refs/heads/main/Cara%20seting%20custom%20server%20103.102.250.127.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <p style="margin-top: 25px; font-size: 1.5rem; color: red;">
+                <i class="fas fa-info-circle"></i> Informasi mengenai <b>User & Password Blynk</b> dapat dilihat di bagian bawah <b>Web Dashboard</b> alat dengan klik <b>Info Akun Blynk</b>.
+            </p>
+            <img src="https://raw.githubusercontent.com/teguhsakura/petunjuk/main/Screenshot%20info%20akun%20blynk.jpeg" 
+         alt="Info Akun Blynk" 
+         style="width: 100%; max-width: 400px; border-radius: 10px; border: 2px solid #ddd; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p><b>© 2026 Teguh Sakura</b></p>
+        <div class="footer-links">
+            <a href="mailto:teguh.sakura@yahoo.com">✉️ Email</a>
+            <a href="https://shopee.co.id/teguhfarm" target="_blank">🛒 Shopee</a>
+        </div>
+    </div>
+</div>
+<script>
+function toggleVideo(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "none" || x.style.display === "") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+        // Berhenti memutar video saat disembunyikan
+        var video = x.getElementsByTagName('video')[0];
+        if (video) video.pause();
+    }
+}
+</script>
+</body>
+</html>
